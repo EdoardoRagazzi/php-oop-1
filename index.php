@@ -6,10 +6,10 @@ class Movie {
     public $ratings = 0;
     public $boxoffice;
 
-    function __construct($_title,$_director,$boxoffice){
+    function __construct($_title,$_director,$_boxoffice){
         $this->title = $_title;
-        $this->director = $_director,
-        $this->boxoffice = $_boxoffice,
+        $this->director = $_director;
+        $this->boxoffice = $_boxoffice;
     }
 
     public function setRatings($voto){
@@ -24,7 +24,9 @@ class Movie {
         } else {
             $this->ratings = 1;
         }
-        return $this->ratings;
+        return array (
+           'title' => $this->title,
+        );
     }
 
 };
@@ -34,10 +36,14 @@ class Movie {
 $filmAmericani = new Movie('Mr. & Mrs. Smith','Doug Liman',487.000);   //error if i try to icrement the zero like (487.000.000) !!!
 var_dump($filmAmericani);
 
+
+
 $filmAmericani->setRatings(5);
 var_dump($filmAmericani);
 
-echo $ratings;
+$vote = $filmAmericani->setRatings(5);
+
+echo $vote;
 
 
 ?>
