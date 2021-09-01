@@ -35,23 +35,17 @@ class Movie {
 };
 
 
-//First oggetto of Movie    filmAmericani
+//-------------First oggetto of Movie    filmAmericani---------------
 $filmAmericani = new Movie('Mr. & Mrs. Smith','Doug Liman',487.000);   //error if i try to icrement the zero like (487.000.000) !!!
-var_dump($filmAmericani);
-
-
-$filmAmericani->setRatings(5);
-var_dump($filmAmericani);
 $vote = $filmAmericani->setRatings(5);
 print_r($vote);
 
-//Second oggetto of Movie filmitaliani
+for($i = 0; $i < 4; $i++){
+    echo  '<br>' . $vote[$i] . '<br>' ;
+}
+
+//-------------Second oggetto of Movie filmitaliani-------------
 $filmAmericani = new Movie('Dio Perdona..Io No','Giuseppe Colizzi',50.000);   //error if i try to icrement the zero like (487.000.000) !!!
-var_dump($filmAmericani);
-
-
-
-var_dump($filmAmericani);
 $vote = $filmAmericani->setRatings(9);
 print_r($vote);
 
