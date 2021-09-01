@@ -24,26 +24,36 @@ class Movie {
         } else {
             $this->ratings = 1;
         }
-        return array (
-           'title' => $this->title,
+        return array(
+            $this->title,
+            $this->ratings,
+            $this->director,
+            $this->boxoffice
         );
     }
 
 };
 
 
-
+//First oggetto of Movie    filmAmericani
 $filmAmericani = new Movie('Mr. & Mrs. Smith','Doug Liman',487.000);   //error if i try to icrement the zero like (487.000.000) !!!
 var_dump($filmAmericani);
 
 
-
 $filmAmericani->setRatings(5);
 var_dump($filmAmericani);
-
 $vote = $filmAmericani->setRatings(5);
+print_r($vote);
 
-echo $vote;
+//Second oggetto of Movie filmitaliani
+$filmAmericani = new Movie('Dio Perdona..Io No','Giuseppe Colizzi',50.000);   //error if i try to icrement the zero like (487.000.000) !!!
+var_dump($filmAmericani);
+
+
+
+var_dump($filmAmericani);
+$vote = $filmAmericani->setRatings(8);
+print_r($vote);
 
 
 ?>
