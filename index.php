@@ -52,8 +52,12 @@ var_dump($filmAmericani);
 
 
 var_dump($filmAmericani);
-$vote = $filmAmericani->setRatings(8);
+$vote = $filmAmericani->setRatings(9);
 print_r($vote);
+
+for($i = 0; $i < 4; $i++){
+    echo  '<br>' . $vote[$i] . '<br>' ;
+}
 
 
 ?>
